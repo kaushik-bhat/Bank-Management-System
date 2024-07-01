@@ -29,3 +29,9 @@ bool Account::withdraw(double amount){
         return true;
     }
 }
+
+std::string Account::toString() const{
+    std::stringstream ss;
+    ss << accountNumber << "," << accountHolderName << "," << balance;
+    return ss.str();
+}
