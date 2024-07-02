@@ -1,5 +1,5 @@
-#include "Bank.h"
-#include "Utils.h"
+#include "bank.h"
+#include "utils.h"
 #include <fstream>
 #include <iostream>
 #include <sstream>
