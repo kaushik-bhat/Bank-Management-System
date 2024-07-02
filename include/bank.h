@@ -6,7 +6,7 @@
 
 class Bank{
     private:
-        std::vector<Account> acounts;
+        std::vector<Account> accounts;
         int nextAccountNumber;
 
         void loadAccounts();
