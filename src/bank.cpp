@@ -1,5 +1,5 @@
-#include "bank.h"
-#include "utils.h"
+#include "../include/bank.h"
+#include "../include/utils.h"
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -13,7 +13,7 @@ Bank::~Bank(){
 }
 
 void Bank::loadAccounts(){
-    std::ifstream db("data/accounts.txt");
+    std::ifstream db("../data/accounts.txt");
     if(!db.is_open()){
         std::cout<<"Sorry:(\nError with database"<<std::endl;
         return;
@@ -37,7 +37,7 @@ void Bank::loadAccounts(){
 }
 
 void Bank::saveAccounts() const{
-    std::ofstream db("data/accounts.txt");
+    std::ofstream db("../data/accounts.txt");
     if(!db.is_open())
         return;
     
