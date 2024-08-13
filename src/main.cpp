@@ -23,7 +23,7 @@ int main(){
             case 1:{
                 std::string name;
                 double initialBalance;
-                std::cout<<"Enter your account number"<<std::endl;
+                std::cout<<"Enter your name"<<std::endl;
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
                 getline(std::cin,name);
                 std::cout<<"Enter initial balance: "<<std::endl;
@@ -51,7 +51,7 @@ int main(){
                 double amount;
                 std::cout<<"Enter your account number"<<std::endl;
                 std::cin>>accNum;
-                std::cout<<"Enter amount to be deposited"<<std::endl;
+                std::cout<<"Enter amount to be withdrawn"<<std::endl;
                 std::cin>>amount;
                 if(bank.withdraw(accNum,amount)){
                     std::cout<<amount<<" succesfully withdrawn from account "<<accNum<<std::endl;

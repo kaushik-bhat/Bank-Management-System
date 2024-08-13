@@ -13,7 +13,7 @@ Bank::~Bank(){
 }
 
 void Bank::loadAccounts(){
-    std::ifstream db("../data/accounts.txt");
+    std::ifstream db("D:/C++/Projects/Bank Management System/Bank-Management-System/data/accounts.txt");
     if(!db.is_open()){
         std::cout<<"Sorry:(\nError with database"<<std::endl;
         return;
@@ -37,7 +37,7 @@ void Bank::loadAccounts(){
 }
 
 void Bank::saveAccounts() const{
-    std::ofstream db("../data/accounts.txt");
+    std::ofstream db("D:/C++/Projects/Bank Management System/Bank-Management-System/data/accounts.txt");
     if(!db.is_open())
         return;
     
@@ -47,6 +47,7 @@ void Bank::saveAccounts() const{
 }
 
 void Bank::createAccount(const std::string& name, double initialBalance){
+    std::cout<<name<<" your account number is "<<nextAccountNumber<<"\n"<<"Please remember this for future transactions"<<"\n";
     accounts.emplace_back(nextAccountNumber++,name,initialBalance);
     saveAccounts();
 }
