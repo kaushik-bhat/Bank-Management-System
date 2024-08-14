@@ -2,8 +2,8 @@
 #include <sstream>  
 
 //Constructor
-Account::Account(int accNum, const std::string& name , double bal)
-    : accountNumber(accNum) , accountHolderName(name) , balance(bal) {}
+Account::Account(int accNum, const std::string& name , double bal,const std::string& pwdHash)
+    : accountNumber(accNum) , accountHolderName(name) , balance(bal), passwordHash(pwdHash) {}
 
 int Account::getAccountNumber() const {
     return accountNumber;
@@ -15,6 +15,10 @@ std::string Account::getAccountHolderName() const{
 
 double Account::getBalance() const{
     return balance;
+}
+
+std::string Account::getPasswordHash() const {
+    return passwordHash;
 }
 
 void Account::deposit(double amount){
