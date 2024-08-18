@@ -1,4 +1,4 @@
-# Bank Management System README
+# Bank Management System
 
 Welcome to the Bank Management System project! This C++ application simulates a simple banking system where users can create accounts, manage their funds, and access account details. It also includes an administrative feature that allows admins to view the details of all user accounts.
 
